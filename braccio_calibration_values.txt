@@ -1,0 +1,28 @@
+
+arm.setJointCenter(BASE_ROT, 120);
+arm.setJointMin(BASE_ROT, 0);
+arm.setJointMax(BASE_ROT, 180);
+
+
+arm.setJointCenter(SHOULDER, 98);
+arm.setJointMin(SHOULDER, 0);
+arm.setJointMax(SHOULDER, 180);
+
+
+arm.setJointCenter(ELBOW, 93);
+arm.setJointMin(ELBOW, 7);
+arm.setJointMax(ELBOW, 180);
+
+arm.setJointCenter(WRIST, 98);
+arm.setJointMin(WRIST, 12);
+arm.setJointMax(WRIST, 180);
+
+
+arm.setJointCenter(WRIST_ROT, 90);
+arm.setJointMin(WRIST_ROT, 0);
+arm.setJointMax(WRIST_ROT, 180);
+
+
+arm.setJointCenter(GRIPPER, 40);
+arm.setJointMin(GRIPPER, 15);
+arm.setJointMax(GRIPPER, 80);
