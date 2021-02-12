@@ -36,10 +36,10 @@ elbow_angle_limits_l40 = np.array([60,58,42,24])
 
 
 ## Equation fitting
-coeffs_linear_g140 = np.polyfit(shoulder_angles, elbow_angle_limits, deg=1)
-coeffs_quad_g140 = np.polyfit(shoulder_angles, elbow_angle_limits, deg=2)
-coeffs_linear_l40 = np.polyfit(shoulder_angles2, elbow_angle_limits2, deg=1)
-coeffs_quad_l40 = np.polyfit(shoulder_angles2, elbow_angle_limits2, deg=2)
+coeffs_linear_g140 = np.polyfit(shoulder_angles_g140, elbow_angle_limits_g140, deg=1)
+coeffs_quad_g140 = np.polyfit(shoulder_angles_g140, elbow_angle_limits_g140, deg=2)
+coeffs_linear_l40 = np.polyfit(shoulder_angles_l40, elbow_angle_limits_l40, deg=1)
+coeffs_quad_l40 = np.polyfit(shoulder_angles_l40, elbow_angle_limits_l40, deg=2)
 
 # print(coeffs)
 # print(coeffs2)
@@ -53,12 +53,12 @@ def fitted(x, coeffs, opt='linear'):
   
 
 xvec_g140 = np.linspace(140, 180, 100)
-yvec_linear_g140 = fitted(xvec, coeffs_linear_g140)
-yvec_quad_g140 = fitted(xvec, 'quad')
+yvec_linear_g140 = fitted(xvec_g140, coeffs_linear_g140)
+yvec_quad_g140 = fitted(xvec_g140, coeffs_quad_g140 ,opt='quad')
 
 xvec_l40 = np.linspace(0, 40, 100)
 yvec_linear_l40 = fitted(xvec_l40, coeffs_linear_l40)
-yvec_quad_l40 = fitted(xvec_l40, 'quad')
+yvec_quad_l40 = fitted(xvec_l40, coeffs_quad_l40 ,opt='quad')
 
 ## Plotting
 fig = plt.figure(num=1, clear=True)
